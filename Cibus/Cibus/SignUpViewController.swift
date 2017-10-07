@@ -11,7 +11,7 @@ import UIKit
 class SignUpViewController: UIViewController {
     
     // UI
-    let mdbSocialsLogo: UIImage = #imageLiteral(resourceName: "mdb_socials_logo_white-3")
+    let mdbSocialsLogo: UIImage = #imageLiteral(resourceName: "cibus-white")
     var logoImageView: UIImageView!
     var backgroundColor: UIColor = Constants.lightGreen
     

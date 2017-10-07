@@ -11,7 +11,7 @@ import UIKit
 class LandingViewController: UIViewController {
     
     // TODO: Add real logo
-    let mdbSocialsLogo: UIImage = #imageLiteral(resourceName: "mdb_socials_logo_white-3")
+    let mdbSocialsLogo: UIImage = #imageLiteral(resourceName: "cibus-green")
     var logoImageView: UIImageView!
     
     // buttons

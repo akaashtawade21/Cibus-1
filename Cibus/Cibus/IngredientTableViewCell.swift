@@ -10,6 +10,10 @@ import UIKit
 
 class IngredientTableViewCell: UITableViewCell {
 
+    var ingredientPhoto: UIImage!
+    var ingredientName: String!
+    var ingredientQuantity: String!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

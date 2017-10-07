@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "641289D6F7F6F8B13B7FCAA09B4E39EB4835EDC6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "C413D1830EC446D3444ED688A72182F0C56C51E9" : 9223372036854775807,
+    "641289D6F7F6F8B13B7FCAA09B4E39EB4835EDC6" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "384C56EF-EAB0-4DC7-AA7E-61358013A514",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "C413D1830EC446D3444ED688A72182F0C56C51E9" : "MDBSocials\/",
+    "641289D6F7F6F8B13B7FCAA09B4E39EB4835EDC6" : "cal_hacks\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Cibus",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Cibus\/Cibus.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/louieg888\/Cibus.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "641289D6F7F6F8B13B7FCAA09B4E39EB4835EDC6"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/louieg888\/MDBSocials.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C413D1830EC446D3444ED688A72182F0C56C51E9"
+    }
+  ]
+}
