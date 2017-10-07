@@ -8,14 +8,19 @@
 
 import UIKit
 
-class RecipeListViewController: UIViewController {
+class RecipeListViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var tableView: UITableView!
     var recipes: [Recipe]!
     var numCells: Int = 0
+    var vc: UIViewController!
+    
+    var picker: UIImagePickerController = UIImagePickerController()
     
     var urlToPass: String!
     var titleToPass: String!
+    
+    var imageToPass: UIImage!
     var cameraIcon: UIImage = #imageLiteral(resourceName: "ic_camera_alt")
 
     override func viewDidLoad() {
@@ -31,7 +36,37 @@ class RecipeListViewController: UIViewController {
     }
     
     func openPhotoSelectionViewController() {
-        print("opened!")
+        let alertController = UIAlertController(title: nil, message: "How would you like to select your photo?", preferredStyle: .actionSheet)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { action in
+            // ...
+        }
+        alertController.addAction(cancelAction)
+        
+        let chooseFromPhotoRoll = UIAlertAction(title: "Choose From Photo Roll", style: .default) { action in
+            self.picker.delegate = self
+            self.picker.allowsEditing = false
+            self.picker.sourceType = .photoLibrary
+            self.present(self.picker, animated: true, completion: nil)
+        }
+        
+        alertController.addAction(chooseFromPhotoRoll)
+        
+        let takeNewPhoto = UIAlertAction(title: "Take New Photo", style: .default) { action in
+            self.picker.delegate = self
+            self.picker.allowsEditing = false
+            self.picker.sourceType = .camera
+            self.present(self.picker, animated: true, completion: nil)        }
+        alertController.addAction(takeNewPhoto)
+        
+        self.present(alertController, animated: true)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        imageToPass = chosenImage
+        dismiss(animated: true, completion: {
+            self.performSegue(withIdentifier: "toPhotoSelectionVC", sender: self)
+        })
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,9 +85,12 @@ class RecipeListViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toWebViewVC" {
-            let vc = segue.destination as! RecipeWebViewController
-            vc.recipeTitle = titleToPass
-            vc.urlString = urlToPass
+            vc = segue.destination as! RecipeWebViewController
+            (vc as! RecipeWebViewController).recipeTitle = titleToPass
+            (vc as! RecipeWebViewController).urlString = urlToPass
+        } else if segue.identifier == "toPhotoSelectionVC" {
+            vc = segue.destination as! PhotoSelectionViewController
+            (vc as! PhotoSelectionViewController).photo = imageToPass
         }
     }
 }
@@ -85,7 +123,7 @@ extension RecipeListViewController : UITableViewDelegate, UITableViewDataSource 
     func updateRecipeValuesAsynchronously(indexPath: IndexPath, cell: RecipeTableViewCell) {
         // TODO: db call to get recipes, handle as follows
         cell.recipeNameLabel.text = cell.recipe.recipeName
-        cell.recipeIngredientsTextView.text = String(describing: cell.recipe.ingredients)
+        cell.recipeIngredientsTextView.text = cell.recipe.ingredients.joined(separator: ", ")
         cell.recipeImageView.imageFromServerURL(urlString: cell.recipe.imageUrl)
     }
     

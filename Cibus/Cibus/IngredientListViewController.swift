@@ -10,9 +10,12 @@ import UIKit
 
 class IngredientListViewController: UIViewController {
 
+    var cameraIcon: UIImage = #imageLiteral(resourceName: "ic_camera_alt")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.parent?.navigationItem.hidesBackButton = true
+        self.parent?.navigationItem.rightBarButtonItem = UIBarButtonItem(image: cameraIcon, style: .plain, target: self, action: #selector(openPhotoSelectionViewController))
 
         // Do any additional setup after loading the view.
     }
@@ -26,6 +29,9 @@ class IngredientListViewController: UIViewController {
         self.parent?.title = "Ingredient List"
     }
     
+    func openPhotoSelectionViewController() {
+        performSegue(withIdentifier: "toPhotoSelectionVC", sender: self)
+    }
 
     /*
     // MARK: - Navigation

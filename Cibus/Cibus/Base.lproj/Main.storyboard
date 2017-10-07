@@ -130,7 +130,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Ingredients" id="xD3-ai-5mR"/>
                     <connections>
-                        <segue destination="tFz-Rc-xvl" kind="show" id="nEs-Lz-7m2"/>
+                        <segue destination="tFz-Rc-xvl" kind="show" identifier="toPhotoSelectionVC" id="nEs-Lz-7m2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WSl-Yi-J1U" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -196,7 +196,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Recipes" id="63S-LX-aYz"/>
                     <connections>
-                        <segue destination="tFz-Rc-xvl" kind="show" id="E80-1M-35C"/>
+                        <segue destination="tFz-Rc-xvl" kind="show" identifier="toPhotoSelectionVC" id="E80-1M-35C"/>
                         <segue destination="jRh-QZ-U8o" kind="show" identifier="toWebViewVC" id="1VN-Yc-8VQ"/>
                     </connections>
                 </viewController>
@@ -207,6 +207,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="kF0-4c-fSK"/>
-        <segue reference="E80-1M-35C"/>
+        <segue reference="nEs-Lz-7m2"/>
     </inferredMetricsTieBreakers>
 </document>

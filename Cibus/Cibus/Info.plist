@@ -9,6 +9,10 @@
 	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string></string>
 	<key>CFBundleDisplayName</key>
 	<string>Cibus</string>
 	<key>CFBundleExecutable</key>
