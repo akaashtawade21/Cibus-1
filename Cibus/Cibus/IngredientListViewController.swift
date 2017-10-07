@@ -12,7 +12,8 @@ class IngredientListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.parent?.title = "Ingredient List"
+        self.parent?.navigationItem.hidesBackButton = true
+
         // Do any additional setup after loading the view.
     }
 

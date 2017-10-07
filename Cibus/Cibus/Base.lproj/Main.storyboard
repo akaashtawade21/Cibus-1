@@ -137,6 +137,24 @@
             </objects>
             <point key="canvasLocation" x="1761" y="2065"/>
         </scene>
+        <!--Recipe Web View Controller-->
+        <scene sceneID="4co-4Y-gV9">
+            <objects>
+                <viewController storyboardIdentifier="RecipeWebViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jRh-QZ-U8o" customClass="RecipeWebViewController" customModule="Cibus" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="raa-Aa-D42"/>
+                        <viewControllerLayoutGuide type="bottom" id="WRc-zi-lP9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="69h-Es-gCE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j3a-Z5-LQR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3780" y="844"/>
+        </scene>
         <!--Storyboard Reference-->
         <scene sceneID="lTK-Oe-Qta">
             <objects>
@@ -179,6 +197,7 @@
                     <tabBarItem key="tabBarItem" title="Recipes" id="63S-LX-aYz"/>
                     <connections>
                         <segue destination="tFz-Rc-xvl" kind="show" id="E80-1M-35C"/>
+                        <segue destination="jRh-QZ-U8o" kind="show" identifier="toWebViewVC" id="1VN-Yc-8VQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xdn-ZL-Kny" userLabel="First Responder" sceneMemberID="firstResponder"/>

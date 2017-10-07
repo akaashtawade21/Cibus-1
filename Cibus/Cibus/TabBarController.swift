@@ -12,13 +12,6 @@ class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(self.viewControllers!.count)
-        for viewController in self.viewControllers! {
-            print(viewController.title)
-            // viewController.navigationItem.title = "Recipes"
-            viewController.viewDidLoad()
-            print(viewController.title)
-        }
 
         // Do any additional setup after loading the view.
     }
