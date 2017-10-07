@@ -16,16 +16,22 @@ class RecipeListViewController: UIViewController {
     
     var urlToPass: String!
     var titleToPass: String!
+    var cameraIcon: UIImage = #imageLiteral(resourceName: "ic_camera_alt")
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.parent?.navigationItem.hidesBackButton = true
+        self.parent?.navigationItem.rightBarButtonItem = UIBarButtonItem(image: cameraIcon, style: .plain, target: self, action: #selector(openPhotoSelectionViewController))
         
         // load the recipes from the database.
         // TODO: Make this a DB call.
         recipes = Constants.testRecipeArray
         
         addTableView()
+    }
+    
+    func openPhotoSelectionViewController() {
+        print("opened!")
     }
     
     override func viewWillAppear(_ animated: Bool) {
