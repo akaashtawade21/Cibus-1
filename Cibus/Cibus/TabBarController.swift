@@ -1,5 +1,5 @@
 //
-//  IngredientListViewController.swift
+//  TabBarController.swift
 //  Cibus
 //
 //  Created by Louie McConnell on 10/7/17.
@@ -8,11 +8,18 @@
 
 import UIKit
 
-class IngredientListViewController: UIViewController {
+class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.parent?.title = "Ingredient List"
+        print(self.viewControllers!.count)
+        for viewController in self.viewControllers! {
+            print(viewController.title)
+            // viewController.navigationItem.title = "Recipes"
+            viewController.viewDidLoad()
+            print(viewController.title)
+        }
+
         // Do any additional setup after loading the view.
     }
 
@@ -21,11 +28,6 @@ class IngredientListViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        self.parent?.title = "Ingredient List"
-    }
-    
-
     /*
     // MARK: - Navigation
 

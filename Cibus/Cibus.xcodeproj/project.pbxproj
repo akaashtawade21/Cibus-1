@@ -19,6 +19,9 @@
 		F31B1D991F88E98600B7C245 /* RecipeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31B1D981F88E98600B7C245 /* RecipeListViewController.swift */; };
 		F31B1D9B1F88E98D00B7C245 /* IngredientListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31B1D9A1F88E98D00B7C245 /* IngredientListViewController.swift */; };
 		F31B1D9D1F88E99A00B7C245 /* PhotoSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31B1D9C1F88E99A00B7C245 /* PhotoSelectionViewController.swift */; };
+		F31B1D9F1F88EE0300B7C245 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31B1D9E1F88EE0300B7C245 /* TextField.swift */; };
+		F31B1DA11F88EF6B00B7C245 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31B1DA01F88EF6B00B7C245 /* Constants.swift */; };
+		F31B1DA31F88F5B800B7C245 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31B1DA21F88F5B800B7C245 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		F31B1D981F88E98600B7C245 /* RecipeListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeListViewController.swift; sourceTree = "<group>"; };
 		F31B1D9A1F88E98D00B7C245 /* IngredientListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientListViewController.swift; sourceTree = "<group>"; };
 		F31B1D9C1F88E99A00B7C245 /* PhotoSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSelectionViewController.swift; sourceTree = "<group>"; };
+		F31B1D9E1F88EE0300B7C245 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextField.swift; path = ../../../MDBSocials/MDBSocials/TextField.swift; sourceTree = "<group>"; };
+		F31B1DA01F88EF6B00B7C245 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F31B1DA21F88F5B800B7C245 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,12 +115,15 @@
 			children = (
 				F31B1D641F88CEAE00B7C245 /* AppDelegate.swift */,
 				F31B1D921F88E95900B7C245 /* LandingViewController.swift */,
+				F31B1DA01F88EF6B00B7C245 /* Constants.swift */,
 				F31B1D941F88E96600B7C245 /* LoginViewController.swift */,
 				F31B1D961F88E96E00B7C245 /* SignUpViewController.swift */,
 				F31B1D981F88E98600B7C245 /* RecipeListViewController.swift */,
 				F31B1D9A1F88E98D00B7C245 /* IngredientListViewController.swift */,
 				F31B1D9C1F88E99A00B7C245 /* PhotoSelectionViewController.swift */,
+				F31B1D9E1F88EE0300B7C245 /* TextField.swift */,
 				F31B1D681F88CEAE00B7C245 /* Main.storyboard */,
+				F31B1DA21F88F5B800B7C245 /* TabBarController.swift */,
 				F31B1D6B1F88CEAE00B7C245 /* Assets.xcassets */,
 				F31B1D6D1F88CEAE00B7C245 /* LaunchScreen.storyboard */,
 				F31B1D701F88CEAE00B7C245 /* Info.plist */,
@@ -280,10 +289,13 @@
 				F31B1D991F88E98600B7C245 /* RecipeListViewController.swift in Sources */,
 				F31B1D9B1F88E98D00B7C245 /* IngredientListViewController.swift in Sources */,
 				F31B1D951F88E96600B7C245 /* LoginViewController.swift in Sources */,
+				F31B1DA31F88F5B800B7C245 /* TabBarController.swift in Sources */,
+				F31B1D9F1F88EE0300B7C245 /* TextField.swift in Sources */,
 				F31B1D9D1F88E99A00B7C245 /* PhotoSelectionViewController.swift in Sources */,
 				F31B1D931F88E95900B7C245 /* LandingViewController.swift in Sources */,
 				F31B1D971F88E96E00B7C245 /* SignUpViewController.swift in Sources */,
 				F31B1D651F88CEAE00B7C245 /* AppDelegate.swift in Sources */,
+				F31B1DA11F88EF6B00B7C245 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,6 +548,7 @@
 				F31B1D8B1F88CEAE00B7C245 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F31B1D8C1F88CEAE00B7C245 /* Build configuration list for PBXNativeTarget "CibusTests" */ = {
 			isa = XCConfigurationList;
@@ -544,6 +557,7 @@
 				F31B1D8E1F88CEAE00B7C245 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F31B1D8F1F88CEAE00B7C245 /* Build configuration list for PBXNativeTarget "CibusUITests" */ = {
 			isa = XCConfigurationList;
@@ -552,6 +566,7 @@
 				F31B1D911F88CEAE00B7C245 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

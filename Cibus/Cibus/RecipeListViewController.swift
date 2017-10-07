@@ -12,13 +12,18 @@ class RecipeListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.parent?.title = "Recipes"
+        print("loaded")
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.parent?.title = "Recipes"
     }
     
 

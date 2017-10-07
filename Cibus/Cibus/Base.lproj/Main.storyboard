@@ -51,7 +51,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="qbB-6o-ApV"/>
                     <connections>
-                        <segue destination="fmr-8w-eA2" kind="show" id="mij-af-dpp"/>
+                        <segue destination="0FE-8j-bOI" kind="show" identifier="fromSignupVCToRecipeListVC" id="SaJ-js-ayv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XQg-kK-d5B" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -68,7 +68,7 @@
                     </navigationBar>
                     <connections>
                         <segue destination="Lcb-bh-lBH" kind="relationship" relationship="rootViewController" id="M12-KG-PhV"/>
-                        <segue destination="fmr-8w-eA2" kind="show" id="MNj-Xj-eNA"/>
+                        <segue destination="0FE-8j-bOI" kind="show" id="wyp-1x-D0R"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RpY-09-McG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -90,7 +90,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="xRy-qg-PZn"/>
                     <connections>
-                        <segue destination="fmr-8w-eA2" kind="show" id="0rN-Bc-6Ni"/>
+                        <segue destination="0FE-8j-bOI" kind="show" identifier="fromLoginVCToRecipeListVC" id="kF0-4c-fSK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mZs-8X-9CV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -100,7 +100,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="04q-mW-pAO">
             <objects>
-                <tabBarController id="0FE-8j-bOI" sceneMemberID="viewController">
+                <tabBarController id="0FE-8j-bOI" customClass="TabBarController" customModule="Cibus" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="vWk-JF-Key">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -115,10 +115,10 @@
             </objects>
             <point key="canvasLocation" x="1761" y="1181"/>
         </scene>
-        <!--Item-->
+        <!--Ingredients-->
         <scene sceneID="HQD-J2-C1R">
             <objects>
-                <viewController id="I33-6A-5CO" customClass="IngredientsListViewController" sceneMemberID="viewController">
+                <viewController id="I33-6A-5CO" customClass="IngredientListViewController" customModule="Cibus" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="77e-tk-45I"/>
                         <viewControllerLayoutGuide type="bottom" id="OLe-8u-gaR"/>
@@ -128,7 +128,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="xD3-ai-5mR"/>
+                    <tabBarItem key="tabBarItem" title="Ingredients" id="xD3-ai-5mR"/>
+                    <connections>
+                        <segue destination="tFz-Rc-xvl" kind="show" id="nEs-Lz-7m2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WSl-Yi-J1U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -142,10 +145,28 @@
             </objects>
             <point key="canvasLocation" x="1960" y="1873"/>
         </scene>
-        <!--Item-->
+        <!--Photo Selection View Controller-->
+        <scene sceneID="yr4-Nj-0ut">
+            <objects>
+                <viewController id="tFz-Rc-xvl" customClass="PhotoSelectionViewController" customModule="Cibus" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="J2n-hy-AYm"/>
+                        <viewControllerLayoutGuide type="bottom" id="dOO-cx-7yB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ahz-nc-rkc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dfD-rl-tag" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2921" y="2065"/>
+        </scene>
+        <!--Recipes-->
         <scene sceneID="Bub-8f-Nlb">
             <objects>
-                <viewController id="fmr-8w-eA2" customClass="RecipeListViewController" sceneMemberID="viewController">
+                <viewController id="fmr-8w-eA2" customClass="RecipeListViewController" customModule="Cibus" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XdE-Wt-9YB"/>
                         <viewControllerLayoutGuide type="bottom" id="HTp-ad-io6"/>
@@ -155,22 +176,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="63S-LX-aYz"/>
+                    <tabBarItem key="tabBarItem" title="Recipes" id="63S-LX-aYz"/>
+                    <connections>
+                        <segue destination="tFz-Rc-xvl" kind="show" id="E80-1M-35C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xdn-ZL-Kny" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2921" y="845"/>
-        </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="rmc-gE-6IY">
-            <objects>
-                <viewControllerPlaceholder id="F6i-RP-fii" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hvA-1G-TIO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2948" y="894"/>
+            <point key="canvasLocation" x="2719" y="845"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mij-af-dpp"/>
+        <segue reference="kF0-4c-fSK"/>
+        <segue reference="E80-1M-35C"/>
     </inferredMetricsTieBreakers>
 </document>
