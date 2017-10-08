@@ -64,11 +64,15 @@ class PhotoSelectionViewController: UIViewController {
     func handleReceiptProcessing() {
         // endpoint: '/receipt/add/(uid)'
         
-        // TODO: Get real UID
+        // TODO 1: Get real UID
         
         Utils.postReceiptImage(uid: "1", image: photo) { (ingredients) -> (Void) in
-            print(ingredients)
+            // add ingredients to the ingredients list
+            // add ingredients to the ingredients tableview
+            // recalculate the recipes tableview
+            NotificationCenter.default.post(name: .reload, object: nil)
         }
+
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -91,6 +95,14 @@ class PhotoSelectionViewController: UIViewController {
     
     // TODO: Implement
     func handleIngredientProcessing() {
+        
+        Utils.postIngredientImage(uid: "1", image: photo) { (ingredients) -> (Void) in
+            // add ingredients to the ingredients list
+            // add ingredients to the ingredients tableview
+            // recalculate the recipes tableview
+            NotificationCenter.default.post(name: .reload, object: nil)
+        }
+        
         self.navigationController?.popViewController(animated: true)
     }
 }

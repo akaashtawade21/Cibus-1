@@ -15,6 +15,7 @@ class RecipeTableViewCell: UITableViewCell {
     var recipeImageView: UIImageView!
     var recipeNameLabel: UILabel!
     var recipeIngredientsTextView: UITextView!
+    var recipeExpirationDateLabel: UILabel!
     
     var recipeImage: UIImage!
     
@@ -23,6 +24,7 @@ class RecipeTableViewCell: UITableViewCell {
         setupImageView()
         setupRecipeNameLabel()
         setupRecipeIngredientsTextView()
+        setupRecipeExpirationDateLabel()
     }
     
     
@@ -44,11 +46,11 @@ class RecipeTableViewCell: UITableViewCell {
         recipeNameLabel = UILabel()
         recipeNameLabel.frame = CGRect(
             x: recipeImageView.frame.maxX + 10,
-            y: recipeImageView.frame.minY + 30,
+            y: recipeImageView.frame.minY + 20,
             width: 250,
             height: 36
         )
-        recipeNameLabel.font = UIFont(name: "Helvetica Neue", size: 26)
+        recipeNameLabel.font = UIFont(name: "Helvetica Neue", size: 20)
         recipeNameLabel.textAlignment = .left
         recipeNameLabel.text = "Default Event Name"
         contentView.addSubview(recipeNameLabel)
@@ -60,7 +62,7 @@ class RecipeTableViewCell: UITableViewCell {
             x: recipeNameLabel.frame.minX - 2,
             y: recipeNameLabel.frame.maxY + 10,
             width: 250,
-            height: 60
+            height: 30
         )
         recipeIngredientsTextView.font = UIFont(name: "Helvetica Neue", size: 14)
         recipeIngredientsTextView.textColor = UIColor.lightGray
@@ -71,9 +73,20 @@ class RecipeTableViewCell: UITableViewCell {
         recipeIngredientsTextView.isEditable = false
         contentView.addSubview(recipeIngredientsTextView)
     }
-
     
-    
+    func setupRecipeExpirationDateLabel() {
+        recipeExpirationDateLabel = UILabel()
+        recipeExpirationDateLabel.frame = CGRect(
+            x: recipeNameLabel.frame.minX + 2,
+            y: recipeIngredientsTextView.frame.maxY + 10,
+            width: 250,
+            height: 36
+        )
+        recipeExpirationDateLabel.font = UIFont(name: "Helvetica Neue", size: 16)
+        recipeExpirationDateLabel.textAlignment = .left
+        recipeExpirationDateLabel.text = "Expires in (x) Days"
+        contentView.addSubview(recipeExpirationDateLabel)
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

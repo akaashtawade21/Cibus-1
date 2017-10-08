@@ -162,8 +162,6 @@ class SignUpViewController: UIViewController {
     // 3. if the email already has an associated account
     // 4.
     func verifySignupInformation() {
-        // TODO: IMPLEMENT
-        
         // if passwords don't match, add an alert
         if (passwordOneTextField.text != passwordTwoTextField.text) {
             let alertController = UIAlertController(title: "Error", message:
@@ -182,7 +180,7 @@ class SignUpViewController: UIViewController {
             return
         }
         
-        // TODO: Actually do a login!!!!
+        // TODO 1: Actually do a login!!!!
         performSegue(withIdentifier: "fromSignupVCToRecipeListVC", sender: self)
     }
     

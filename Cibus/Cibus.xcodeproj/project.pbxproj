@@ -169,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				F31B1D641F88CEAE00B7C245 /* AppDelegate.swift */,
+				F3F5B1A01F8A372E0095A4B0 /* Controllers */,
 				F31B1DA91F88FF2F00B7C245 /* View */,
 				F3F5B19F1F89867D0095A4B0 /* Model */,
 				F31B1DB01F89108700B7C245 /* Utils.swift */,
@@ -213,7 +214,6 @@
 			isa = PBXGroup;
 			children = (
 				F31B1D9E1F88EE0300B7C245 /* TextField.swift */,
-				F31B1DA21F88F5B800B7C245 /* TabBarController.swift */,
 				F31B1DAB1F88FF4800B7C245 /* View Controllers */,
 				F31B1DA81F88FF1500B7C245 /* Table View Cells */,
 			);
@@ -223,12 +223,12 @@
 		F31B1DAB1F88FF4800B7C245 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F31B1D9A1F88E98D00B7C245 /* IngredientListViewController.swift */,
 				F31B1D921F88E95900B7C245 /* LandingViewController.swift */,
 				F31B1D941F88E96600B7C245 /* LoginViewController.swift */,
 				F31B1D961F88E96E00B7C245 /* SignUpViewController.swift */,
-				F31B1D981F88E98600B7C245 /* RecipeListViewController.swift */,
 				F31B1DAE1F890B9F00B7C245 /* RecipeWebViewController.swift */,
+				F31B1D9A1F88E98D00B7C245 /* IngredientListViewController.swift */,
+				F31B1D981F88E98600B7C245 /* RecipeListViewController.swift */,
 				F31B1D9C1F88E99A00B7C245 /* PhotoSelectionViewController.swift */,
 			);
 			name = "View Controllers";
@@ -241,6 +241,14 @@
 				F31B1DB51F89841000B7C245 /* Ingredient.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		F3F5B1A01F8A372E0095A4B0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F31B1DA21F88F5B800B7C245 /* TabBarController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -439,10 +447,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Cibus/Pods-Cibus-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

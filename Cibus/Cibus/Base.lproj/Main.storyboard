@@ -118,7 +118,7 @@
         <!--Ingredients-->
         <scene sceneID="HQD-J2-C1R">
             <objects>
-                <viewController id="I33-6A-5CO" customClass="IngredientListViewController" customModule="Cibus" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IngredientListViewController" id="I33-6A-5CO" customClass="IngredientListViewController" customModule="Cibus" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="77e-tk-45I"/>
                         <viewControllerLayoutGuide type="bottom" id="OLe-8u-gaR"/>
@@ -128,7 +128,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Ingredients" id="xD3-ai-5mR"/>
+                    <tabBarItem key="tabBarItem" title="Ingredients" image="ic_list" id="xD3-ai-5mR"/>
                     <connections>
                         <segue destination="tFz-Rc-xvl" kind="show" identifier="toPhotoSelectionVC" id="nEs-Lz-7m2"/>
                     </connections>
@@ -194,7 +194,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Recipes" id="63S-LX-aYz"/>
+                    <tabBarItem key="tabBarItem" title="Recipes" image="chef-hat" id="63S-LX-aYz"/>
                     <connections>
                         <segue destination="tFz-Rc-xvl" kind="show" identifier="toPhotoSelectionVC" id="E80-1M-35C"/>
                         <segue destination="jRh-QZ-U8o" kind="show" identifier="toWebViewVC" id="1VN-Yc-8VQ"/>
@@ -205,8 +205,12 @@
             <point key="canvasLocation" x="2719" y="845"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chef-hat" width="24" height="23"/>
+        <image name="ic_list" width="24" height="24"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="kF0-4c-fSK"/>
-        <segue reference="nEs-Lz-7m2"/>
+        <segue reference="E80-1M-35C"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -7,21 +7,54 @@
 //
 
 import UIKit
+import Alamofire
 
-class IngredientListViewController: UIViewController {
+//TODO: Make a loading screen at some point. 
+
+class IngredientListViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     var cameraIcon: UIImage = #imageLiteral(resourceName: "ic_camera_alt")
     var ingredients: [Ingredient]!
     var tableView: UITableView!
     var numCells: Int!
+    var imageToPass: UIImage!
+    var picker: UIImagePickerController = UIImagePickerController()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.parent?.navigationItem.hidesBackButton = true
         self.parent?.navigationItem.rightBarButtonItem = UIBarButtonItem(image: cameraIcon, style: .plain, target: self, action: #selector(openPhotoSelectionViewController))
         //TODO: Load this from the database
-        ingredients = Constants.ingredients
-        self.setupTableView()
+        // ingredients = Constants.ingredients
+        
+        // this sets up the table view as well.
+        Utils.getIngredientsList(uid: "1") { (ingredientsList) in
+            self.setIngredientsList(newIngredients: ingredientsList)
+        }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadTableData), name: .reload, object: nil)
+    }
+    
+    func reloadTableData() {
+        Utils.getIngredientsList(uid: "1") { (ingredientsList) in
+            self.setIngredientsList(newIngredients: ingredientsList)
+            self.tableView.reloadData()
+        }
+    }
+    
+    func setIngredientsList(newIngredients: [Ingredient]) {
+        numCells = newIngredients.count
+        self.ingredients = newIngredients
+        if (self.tableView == nil) {
+            setupTableView()
+        } else {
+            tableView.reloadData()
+        }
+    }
+
+    func getLargestNumberOfExpirationDays() -> Int {
+        return ingredients[ingredients.count - 1].expirationDays!
     }
 
     func setupTableView() {
@@ -39,19 +72,49 @@ class IngredientListViewController: UIViewController {
     }
     
     func openPhotoSelectionViewController() {
-        performSegue(withIdentifier: "toPhotoSelectionVC", sender: self)
+        let alertController = UIAlertController(title: nil, message: "How would you like to select your photo?", preferredStyle: .actionSheet)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { action in
+            // ...
+        }
+        alertController.addAction(cancelAction)
+        
+        let chooseFromPhotoRoll = UIAlertAction(title: "Choose From Photo Roll", style: .default) { action in
+            self.picker.delegate = self
+            self.picker.allowsEditing = false
+            self.picker.sourceType = .photoLibrary
+            self.present(self.picker, animated: true, completion: nil)
+        }
+        
+        alertController.addAction(chooseFromPhotoRoll)
+        
+        let takeNewPhoto = UIAlertAction(title: "Take New Photo", style: .default) { action in
+            self.picker.delegate = self
+            self.picker.allowsEditing = false
+            self.picker.sourceType = .camera
+            self.present(self.picker, animated: true, completion: nil)        }
+        alertController.addAction(takeNewPhoto)
+        
+        self.present(alertController, animated: true)
     }
 
-    /*
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        imageToPass = chosenImage
+        dismiss(animated: true, completion: {
+            self.performSegue(withIdentifier: "toPhotoSelectionVC", sender: self)
+        })
+    }
+    
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "toPhotoSelectionVC" {
+            let vc = segue.destination as! PhotoSelectionViewController
+            vc.photo = imageToPass
+        }
     }
-    */
-
 }
 
 extension IngredientListViewController : UITableViewDelegate, UITableViewDataSource {

@@ -13,6 +13,7 @@ class Recipe {
     var ingredients: [String]!
     var imageUrl: String!
     var recipeUrl: String!
+    var recipeExpiration: Int!
     
     init(recipeName: String, ingredients: [String], imageUrl: String, recipeUrl: String) {
         self.recipeName = recipeName
@@ -23,10 +24,11 @@ class Recipe {
     
     // create one for string and one for data
     init(json: [String:Any]) {
-        self.recipeName = json["recipeName"] as! String
+        self.recipeName = json["recipe_name"] as! String
         self.ingredients = json["ingredients"] as! [String]
-        self.imageUrl = json["imageUrl"] as! String
-        self.recipeUrl = json["recipeUrl"] as! String
+        self.imageUrl = json["image_url"] as! String
+        self.recipeUrl = json["recipe_url"] as! String
+        self.recipeExpiration = json["recipe_expiration"] as! Int
     }
     
     

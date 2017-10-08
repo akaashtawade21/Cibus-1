@@ -1,0 +1,6 @@
+framework module Pods_Cibus {
+  umbrella header "Pods-Cibus-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -31,8 +31,27 @@ class RecipeListViewController: UIViewController, UIImagePickerControllerDelegat
         // load the recipes from the database.
         // TODO: Make this a DB call.
         recipes = Constants.testRecipeArray
-        
-        addTableView()
+        Utils.getRecipesList(uid: "1") { (recipesList) in
+            self.setRecipesList(newRecipes: recipesList)
+        }
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadTableData), name: .reload, object: nil)
+    }
+    
+    func reloadTableData() {
+        Utils.getRecipesList(uid: "1") { (recipesList) in
+            self.setRecipesList(newRecipes: recipesList)
+            self.tableView.reloadData()
+        }
+    }
+    
+    func setRecipesList(newRecipes: [Recipe]) {
+        numCells = newRecipes.count
+        self.recipes = newRecipes
+        if (self.tableView == nil) {
+            addTableView()
+        } else {
+            tableView.reloadData()
+        }
     }
     
     func openPhotoSelectionViewController() {
@@ -122,7 +141,8 @@ extension RecipeListViewController : UITableViewDelegate, UITableViewDataSource 
     func updateRecipeValuesAsynchronously(indexPath: IndexPath, cell: RecipeTableViewCell) {
         // TODO: db call to get recipes, handle as follows
         cell.recipeNameLabel.text = cell.recipe.recipeName
-        cell.recipeIngredientsTextView.text = cell.recipe.ingredients.joined(separator: ", ")
+        cell.recipeIngredientsTextView.text = "Ingredients: " + cell.recipe.ingredients.joined(separator: ", ")
+        cell.recipeExpirationDateLabel.text = "Expires in \(cell.recipe.recipeExpiration!) days!"
         cell.recipeImageView.imageFromServerURL(urlString: cell.recipe.imageUrl)
     }
     

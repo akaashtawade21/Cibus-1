@@ -13,19 +13,27 @@ class Ingredient : NSObject {
     var ingredientName: String!
     var ingredientPhotoUrl: String?
     var ingredientImage: UIImage?
+    var expirationDays: Int?
     
     init(ingredientName: String) {
-        self.ingredientName = ingredientName
+        self.ingredientName = ingredientName.capitalizingFirstLetter()
     }
     
     init(ingredientName: String, ingredientPhotoUrl: String) {
-        self.ingredientName = ingredientName
+        self.ingredientName = ingredientName.capitalizingFirstLetter()
         self.ingredientPhotoUrl = ingredientPhotoUrl
+    }
+    
+    
+    init(ingredientName: String, ingredientPhotoUrl: String, expirationDays: Int) {
+        self.ingredientName = ingredientName.capitalizingFirstLetter()
+        self.ingredientPhotoUrl = ingredientPhotoUrl
+        self.expirationDays = expirationDays
     }
     
     init (ingredientJson: [String:Any]) {
         self.ingredientName = ingredientJson["ingredient_name"] as! String
-        self.ingredientPhotoUrl = ingredientJson["ingredient_photo_url"] as! String
+        self.ingredientPhotoUrl = (ingredientJson["ingredient_photo_url"] as! String).capitalizingFirstLetter()
     }
 }
 
