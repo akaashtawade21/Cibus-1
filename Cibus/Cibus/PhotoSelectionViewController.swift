@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class PhotoSelectionViewController: UIViewController {
 
@@ -61,6 +62,13 @@ class PhotoSelectionViewController: UIViewController {
     
     //TODO: implement
     func handleReceiptProcessing() {
+        // endpoint: '/receipt/add/(uid)'
+        
+        // TODO: Get real UID
+        
+        Utils.postReceiptImage(uid: "1", image: photo) { (ingredients) -> (Void) in
+            print(ingredients)
+        }
         self.navigationController?.popViewController(animated: true)
     }
     

@@ -104,6 +104,7 @@ class LoginViewController: UIViewController {
         
         
         //TODO: Actually do the login!!!
+        //time dependent
         performSegue(withIdentifier: "fromLoginVCToRecipeListVC", sender: self)
 
     }

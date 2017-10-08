@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5550B46E86F51EB3952EA655 /* Pods_CibusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D92EA1349324D4DE3DD4EF /* Pods_CibusTests.framework */; };
+		E68E55BF7B14A69DCE206F4B /* Pods_Cibus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C966BCA9C0D8B2B1641BB433 /* Pods_Cibus.framework */; };
 		F31B1D651F88CEAE00B7C245 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31B1D641F88CEAE00B7C245 /* AppDelegate.swift */; };
 		F31B1D6A1F88CEAE00B7C245 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F31B1D681F88CEAE00B7C245 /* Main.storyboard */; };
 		F31B1D6C1F88CEAE00B7C245 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F31B1D6B1F88CEAE00B7C245 /* Assets.xcassets */; };
@@ -29,6 +31,8 @@
 		F31B1DB11F89108700B7C245 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31B1DB01F89108700B7C245 /* Utils.swift */; };
 		F31B1DB31F89110300B7C245 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31B1DB21F89110300B7C245 /* Extensions.swift */; };
 		F31B1DB41F89142F00B7C245 /* RecipeWebViewController.swift in Resources */ = {isa = PBXBuildFile; fileRef = F31B1DAE1F890B9F00B7C245 /* RecipeWebViewController.swift */; };
+		F31B1DB61F89841000B7C245 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31B1DB51F89841000B7C245 /* Ingredient.swift */; };
+		F3B6BDA364EFFED03CB92FCC /* Pods_CibusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22927577F00C50C4FD4985AE /* Pods_CibusUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B9F3FA7F9497B855B2FC75A /* Pods-CibusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CibusTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CibusTests/Pods-CibusTests.debug.xcconfig"; sourceTree = "<group>"; };
+		22927577F00C50C4FD4985AE /* Pods_CibusUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CibusUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		23375402D355604BE1B6B39B /* Pods-CibusUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CibusUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CibusUITests/Pods-CibusUITests.release.xcconfig"; sourceTree = "<group>"; };
+		25C337EEF9A8C76985C841C8 /* Pods-Cibus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cibus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cibus/Pods-Cibus.debug.xcconfig"; sourceTree = "<group>"; };
+		3D2AD112FE92B7013F0A08CD /* Pods-CibusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CibusTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CibusTests/Pods-CibusTests.release.xcconfig"; sourceTree = "<group>"; };
+		584A541B0AE00B66384AE98E /* Pods-Cibus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cibus.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cibus/Pods-Cibus.release.xcconfig"; sourceTree = "<group>"; };
+		8E656AEE4C45D458BEC47C53 /* Pods-CibusUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CibusUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CibusUITests/Pods-CibusUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A3D92EA1349324D4DE3DD4EF /* Pods_CibusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CibusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C966BCA9C0D8B2B1641BB433 /* Pods_Cibus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cibus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F31B1D611F88CEAE00B7C245 /* Cibus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cibus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F31B1D641F88CEAE00B7C245 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F31B1D691F88CEAE00B7C245 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,6 +89,7 @@
 		F31B1DAE1F890B9F00B7C245 /* RecipeWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeWebViewController.swift; sourceTree = "<group>"; };
 		F31B1DB01F89108700B7C245 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		F31B1DB21F89110300B7C245 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F31B1DB51F89841000B7C245 /* Ingredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E68E55BF7B14A69DCE206F4B /* Pods_Cibus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5550B46E86F51EB3952EA655 /* Pods_CibusTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,12 +113,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3B6BDA364EFFED03CB92FCC /* Pods_CibusUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00CF79CC2F5389175619B132 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C966BCA9C0D8B2B1641BB433 /* Pods_Cibus.framework */,
+				A3D92EA1349324D4DE3DD4EF /* Pods_CibusTests.framework */,
+				22927577F00C50C4FD4985AE /* Pods_CibusUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA693EE31CA38C50232DC5FA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				25C337EEF9A8C76985C841C8 /* Pods-Cibus.debug.xcconfig */,
+				584A541B0AE00B66384AE98E /* Pods-Cibus.release.xcconfig */,
+				0B9F3FA7F9497B855B2FC75A /* Pods-CibusTests.debug.xcconfig */,
+				3D2AD112FE92B7013F0A08CD /* Pods-CibusTests.release.xcconfig */,
+				8E656AEE4C45D458BEC47C53 /* Pods-CibusUITests.debug.xcconfig */,
+				23375402D355604BE1B6B39B /* Pods-CibusUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F31B1D581F88CEAE00B7C245 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +150,8 @@
 				F31B1D781F88CEAE00B7C245 /* CibusTests */,
 				F31B1D831F88CEAE00B7C245 /* CibusUITests */,
 				F31B1D621F88CEAE00B7C245 /* Products */,
+				BA693EE31CA38C50232DC5FA /* Pods */,
+				00CF79CC2F5389175619B132 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,10 +170,10 @@
 			children = (
 				F31B1D641F88CEAE00B7C245 /* AppDelegate.swift */,
 				F31B1DA91F88FF2F00B7C245 /* View */,
-				F31B1DA01F88EF6B00B7C245 /* Constants.swift */,
-				F31B1DAC1F88FFBE00B7C245 /* Recipe.swift */,
+				F3F5B19F1F89867D0095A4B0 /* Model */,
 				F31B1DB01F89108700B7C245 /* Utils.swift */,
 				F31B1DB21F89110300B7C245 /* Extensions.swift */,
+				F31B1DA01F88EF6B00B7C245 /* Constants.swift */,
 				F31B1D681F88CEAE00B7C245 /* Main.storyboard */,
 				F31B1D6B1F88CEAE00B7C245 /* Assets.xcassets */,
 				F31B1D6D1F88CEAE00B7C245 /* LaunchScreen.storyboard */,
@@ -171,8 +213,8 @@
 			isa = PBXGroup;
 			children = (
 				F31B1D9E1F88EE0300B7C245 /* TextField.swift */,
-				F31B1DAB1F88FF4800B7C245 /* View Controllers */,
 				F31B1DA21F88F5B800B7C245 /* TabBarController.swift */,
+				F31B1DAB1F88FF4800B7C245 /* View Controllers */,
 				F31B1DA81F88FF1500B7C245 /* Table View Cells */,
 			);
 			name = View;
@@ -192,6 +234,15 @@
 			name = "View Controllers";
 			sourceTree = "<group>";
 		};
+		F3F5B19F1F89867D0095A4B0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F31B1DAC1F88FFBE00B7C245 /* Recipe.swift */,
+				F31B1DB51F89841000B7C245 /* Ingredient.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -199,9 +250,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F31B1D891F88CEAE00B7C245 /* Build configuration list for PBXNativeTarget "Cibus" */;
 			buildPhases = (
+				EA10381B3D3FB5A829717661 /* [CP] Check Pods Manifest.lock */,
 				F31B1D5D1F88CEAE00B7C245 /* Sources */,
 				F31B1D5E1F88CEAE00B7C245 /* Frameworks */,
 				F31B1D5F1F88CEAE00B7C245 /* Resources */,
+				45FAF73CA002A508C02D660F /* [CP] Embed Pods Frameworks */,
+				FBFBB59781603061C0CE3528 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -216,9 +270,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F31B1D8C1F88CEAE00B7C245 /* Build configuration list for PBXNativeTarget "CibusTests" */;
 			buildPhases = (
+				69AC759EB18B10B35BD1441A /* [CP] Check Pods Manifest.lock */,
 				F31B1D711F88CEAE00B7C245 /* Sources */,
 				F31B1D721F88CEAE00B7C245 /* Frameworks */,
 				F31B1D731F88CEAE00B7C245 /* Resources */,
+				C7AF7B60BB82500087E4F388 /* [CP] Embed Pods Frameworks */,
+				2209A9B11F488A94119CBBE8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -234,9 +291,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F31B1D8F1F88CEAE00B7C245 /* Build configuration list for PBXNativeTarget "CibusUITests" */;
 			buildPhases = (
+				E0E4FF651680B2756C3FE4F4 /* [CP] Check Pods Manifest.lock */,
 				F31B1D7C1F88CEAE00B7C245 /* Sources */,
 				F31B1D7D1F88CEAE00B7C245 /* Frameworks */,
 				F31B1D7E1F88CEAE00B7C245 /* Resources */,
+				046CCEB5544F1C3A056CA978 /* [CP] Embed Pods Frameworks */,
+				265114031673573C955D79FD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -325,6 +385,156 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		046CCEB5544F1C3A056CA978 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CibusUITests/Pods-CibusUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2209A9B11F488A94119CBBE8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CibusTests/Pods-CibusTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		265114031673573C955D79FD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CibusUITests/Pods-CibusUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		45FAF73CA002A508C02D660F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Cibus/Pods-Cibus-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cibus/Pods-Cibus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		69AC759EB18B10B35BD1441A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CibusTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7AF7B60BB82500087E4F388 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CibusTests/Pods-CibusTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0E4FF651680B2756C3FE4F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CibusUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA10381B3D3FB5A829717661 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cibus-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBFBB59781603061C0CE3528 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cibus/Pods-Cibus-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F31B1D5D1F88CEAE00B7C245 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -336,6 +546,7 @@
 				F31B1DA51F88FF0300B7C245 /* RecipeTableViewCell.swift in Sources */,
 				F31B1DA31F88F5B800B7C245 /* TabBarController.swift in Sources */,
 				F31B1DB11F89108700B7C245 /* Utils.swift in Sources */,
+				F31B1DB61F89841000B7C245 /* Ingredient.swift in Sources */,
 				F31B1D9F1F88EE0300B7C245 /* TextField.swift in Sources */,
 				F31B1D9D1F88E99A00B7C245 /* PhotoSelectionViewController.swift in Sources */,
 				F31B1D931F88E95900B7C245 /* LandingViewController.swift in Sources */,
@@ -497,6 +708,7 @@
 		};
 		F31B1D8A1F88CEAE00B7C245 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25C337EEF9A8C76985C841C8 /* Pods-Cibus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8W895595MW;
@@ -510,6 +722,7 @@
 		};
 		F31B1D8B1F88CEAE00B7C245 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 584A541B0AE00B66384AE98E /* Pods-Cibus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8W895595MW;
@@ -523,6 +736,7 @@
 		};
 		F31B1D8D1F88CEAE00B7C245 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B9F3FA7F9497B855B2FC75A /* Pods-CibusTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -538,6 +752,7 @@
 		};
 		F31B1D8E1F88CEAE00B7C245 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D2AD112FE92B7013F0A08CD /* Pods-CibusTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -553,6 +768,7 @@
 		};
 		F31B1D901F88CEAE00B7C245 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E656AEE4C45D458BEC47C53 /* Pods-CibusUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 8W895595MW;
@@ -567,6 +783,7 @@
 		};
 		F31B1D911F88CEAE00B7C245 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23375402D355604BE1B6B39B /* Pods-CibusUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 8W895595MW;

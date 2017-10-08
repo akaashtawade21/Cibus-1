@@ -10,7 +10,6 @@ import UIKit
 
 class LandingViewController: UIViewController {
     
-    // TODO: Add real logo
     let mdbSocialsLogo: UIImage = #imageLiteral(resourceName: "cibus-green")
     var logoImageView: UIImageView!
     

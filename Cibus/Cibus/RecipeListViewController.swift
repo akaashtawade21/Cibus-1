@@ -119,7 +119,6 @@ extension RecipeListViewController : UITableViewDelegate, UITableViewDataSource 
         return cell
     }
     
-    
     func updateRecipeValuesAsynchronously(indexPath: IndexPath, cell: RecipeTableViewCell) {
         // TODO: db call to get recipes, handle as follows
         cell.recipeNameLabel.text = cell.recipe.recipeName

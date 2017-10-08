@@ -57,7 +57,7 @@ class RecipeTableViewCell: UITableViewCell {
     func setupRecipeIngredientsTextView() {
         recipeIngredientsTextView = UITextView()
         recipeIngredientsTextView.frame = CGRect(
-            x: recipeNameLabel.frame.minX,
+            x: recipeNameLabel.frame.minX - 2,
             y: recipeNameLabel.frame.maxY + 10,
             width: 250,
             height: 60
